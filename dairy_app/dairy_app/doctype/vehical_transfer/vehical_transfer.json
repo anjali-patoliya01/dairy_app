@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-19 16:19:35.085892",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "transfer_id",
+  "vehical_id",
+  "date",
+  "column_break_obyf",
+  "milk_type",
+  "quantity_transfered_in_liters",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "transfer_id",
+   "fieldtype": "Data",
+   "label": "Transfer ID"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "vehical_id",
+   "fieldtype": "Data",
+   "label": "Vehical ID"
+  },
+  {
+   "fieldname": "milk_type",
+   "fieldtype": "Select",
+   "label": "Milk Type",
+   "options": "\nCow\nBuffalo"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOutgoing\nPending\nTransferred"
+  },
+  {
+   "fieldname": "quantity_transfered_in_liters",
+   "fieldtype": "Float",
+   "label": "Quantity Transfered( In Liters)"
+  },
+  {
+   "fieldname": "column_break_obyf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-19 16:26:35.802227",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Vehical Transfer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

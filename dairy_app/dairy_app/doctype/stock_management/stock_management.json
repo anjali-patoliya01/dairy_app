@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-19 15:02:46.366654",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ewqt",
+  "stock_id",
+  "date",
+  "milk_type",
+  "stock_details_section",
+  "milk_purchased",
+  "milk_sold",
+  "column_break_dvtn",
+  "pending_stock",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ewqt",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "stock_id",
+   "fieldtype": "Data",
+   "label": "Stock ID"
+  },
+  {
+   "fieldname": "milk_type",
+   "fieldtype": "Select",
+   "label": "Milk Type",
+   "options": "\nCow\nBuffalo"
+  },
+  {
+   "fieldname": "stock_details_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Details"
+  },
+  {
+   "fieldname": "milk_sold",
+   "fieldtype": "Float",
+   "label": "Milk Sold"
+  },
+  {
+   "fieldname": "pending_stock",
+   "fieldtype": "Data",
+   "label": "Pending Stock",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dvtn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Stock Management",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "milk_purchased",
+   "fieldtype": "Float",
+   "label": "Milk Purchased"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-19 15:48:41.588107",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Stock Management",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

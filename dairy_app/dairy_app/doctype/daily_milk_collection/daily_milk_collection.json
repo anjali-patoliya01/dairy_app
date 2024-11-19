@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DMC-{MM}-{member_id}-{#####}",
+ "creation": "2024-11-18 18:11:13.386609",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_information_section",
+  "member_id",
+  "collection_date",
+  "column_break_gent",
+  "shift",
+  "milk_details_section",
+  "milk_type",
+  "quantity_in_liter_",
+  "column_break_kivx",
+  "fat_rate",
+  "fat_content",
+  "payment_information_section",
+  "rate_per_liter",
+  "total_cost",
+  "verification_section",
+  "verified_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "label": "Member Id",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "collection_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Collection Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gent",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Shift",
+   "options": "\nMorning\nEvening",
+   "reqd": 1
+  },
+  {
+   "fieldname": "milk_details_section",
+   "fieldtype": "Section Break",
+   "label": "Milk Details"
+  },
+  {
+   "fieldname": "milk_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Milk Type",
+   "options": "\nCow\nBuffalo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_in_liter_",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity( In Liter ) ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fat_content",
+   "fieldtype": "Float",
+   "label": "Fat Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kivx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "rate_per_liter",
+   "fieldtype": "Currency",
+   "label": "Rate Per Liter"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified by",
+   "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Milk Collection",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fat_rate",
+   "fieldtype": "Currency",
+   "label": "Rate Per Rate",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-19 10:47:09.741150",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Daily Milk Collection",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

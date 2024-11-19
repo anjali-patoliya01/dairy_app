@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:customer_name",
+ "creation": "2024-11-19 12:37:12.695960",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_40jg",
+  "milk_sale_date",
+  "column_break_ipnm",
+  "customer_name",
+  "milk_sale_details_section",
+  "milk_type",
+  "quantityin_liter",
+  "fat_content",
+  "column_break_ilbk",
+  "rate_per_fat",
+  "rate_per_liter",
+  "total_amount",
+  "invoice_informations_section",
+  "invoice_reference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_40jg",
+   "fieldtype": "Section Break",
+   "label": "General Informations"
+  },
+  {
+   "fieldname": "milk_sale_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Milk Sale Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "milk_sale_details_section",
+   "fieldtype": "Section Break",
+   "label": "Milk Sale Details"
+  },
+  {
+   "fieldname": "milk_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Milk Type",
+   "options": "\nCow\nBuffalo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantityin_liter",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity(In Liter)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "fat_content",
+   "fieldtype": "Float",
+   "label": "Fat Content"
+  },
+  {
+   "fieldname": "column_break_ilbk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_per_fat",
+   "fieldtype": "Currency",
+   "label": "Rate Per Fat"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_informations_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Informations"
+  },
+  {
+   "fieldname": "invoice_reference",
+   "fieldtype": "Link",
+   "label": "Invoice Reference",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Milk sale",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rate_per_liter",
+   "fieldtype": "Currency",
+   "label": "Rate Per Liter"
+  },
+  {
+   "fieldname": "column_break_ipnm",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-19 13:02:20.231096",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Milk sale",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
