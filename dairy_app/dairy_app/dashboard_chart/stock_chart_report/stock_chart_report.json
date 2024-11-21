@@ -1,0 +1,32 @@
+{
+ "chart_name": "Stock Chart Report",
+ "chart_type": "Report",
+ "creation": "2024-11-21 14:10:10.270355",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2024-11-21 14:10:17.808343",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Stock Chart Report",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Milk Stock Summary report",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "item_code",
+ "y_axis": [
+  {
+   "y_field": "pending_stock"
+  }
+ ]
+}

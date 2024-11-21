@@ -1,0 +1,37 @@
+{
+ "chart_name": "Selling Chart Report",
+ "chart_type": "Report",
+ "creation": "2024-11-21 14:04:01.142203",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2024-11-21 14:10:30.140357",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Selling Chart Report",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Milk Sale Summery Report",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "posting_date",
+ "y_axis": [
+  {
+   "color": "#4463F0",
+   "y_field": "qty"
+  },
+  {
+   "color": "#ed18b8",
+   "y_field": "amount"
+  }
+ ]
+}

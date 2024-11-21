@@ -13,7 +13,8 @@ def execute(filters=None):
         filters = {}
 
     columns = [
-        {"label": "Date", "fieldname": "posting_date", "fieldtype": "Date", "width": 120},
+        {"label": "Customer", "fieldname": "customer", "fieldtype": "data", "width": 150},
+        {"label": "Posting Date", "fieldname": "posting_date", "fieldtype": "Date", "width": 150},
         {"label": "Liters Sold", "fieldname": "qty", "fieldtype": "Float", "width": 150},
         {"label": "Revenue", "fieldname": "amount", "fieldtype": "Currency", "width": 150},
     ]
@@ -21,7 +22,7 @@ def execute(filters=None):
 
     sales_invoices = frappe.get_all(
         "Sales Invoice",  
-        fields=["name", "posting_date"],
+        fields=["customer", "posting_date"],
         filters=filters,
         order_by="posting_date asc"
     )
@@ -45,6 +46,7 @@ def execute(filters=None):
 
 
         data.append({
+            'customer':invoice.customer,
             "posting_date": invoice.posting_date,
             "qty": liters,  
             "amount": revenue,  

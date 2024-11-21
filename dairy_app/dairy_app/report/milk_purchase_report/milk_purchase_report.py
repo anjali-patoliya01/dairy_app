@@ -12,6 +12,7 @@ def execute(filters=None):
         filters = {}
 
     columns = [
+        {"label": "Supplier", "fieldname": "supplier", "fieldtype": "Data", "width": 150},
         {"label": "Date", "fieldname": "posting_date", "fieldtype": "Date", "width": 120},
         {"label": "Liters Purchased", "fieldname": "qty", "fieldtype": "Float", "width": 150},
         {"label": "Total Cost", "fieldname": "amount", "fieldtype": "Currency", "width": 150},
@@ -19,7 +20,7 @@ def execute(filters=None):
 
     milk_purchases = frappe.get_all(
         "Purchase Invoice",  
-        fields=["name", "posting_date"],
+        fields=["name", "posting_date",'supplier'],
         filters=filters,
         order_by="posting_date asc"
     )
@@ -37,14 +38,12 @@ def execute(filters=None):
         liters = sum((item.qty) for item in child_items)
         cost = sum((item.amount) for item in child_items)
    
-
-
-
         total_liters += liters
         total_cost += cost
 
 
         data.append({
+            "supplier" : purchase.supplier,
             "posting_date": purchase.posting_date,
             "qty": liters,
             "amount": cost,
