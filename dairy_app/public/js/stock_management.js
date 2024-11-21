@@ -14,5 +14,32 @@ frappe.ui.form.on('Stock Entry', {
     },
     custom_quantity_transferred: function(frm) {
         frm.trigger('refresh');
+    },
+
+
+    on_submit: function(frm) {
+        if (frm.doc.purpose === 'Material Transfer' && frm.doc.vehicle) {
+            frappe.call({
+                method: 'frappe.client.insert',
+                args: {
+                    doc: {
+                        doctype: 'Vehicle Stock Log',
+                        parent: frm.doc.vehicle,
+                        parentfield: 'stock_log', 
+                        parenttype: 'Vehicle',
+                        date: frappe.datetime.now_date(),
+                        stock_entry_reference: frm.doc.name,
+                        item: frm.doc.items[0].item_code, 
+                        quantity_transferred: frm.doc.items[0].qty
+                    }
+                },
+                callback: function(r) {
+                    if (!r.exc) {
+                        frappe.msgprint(__('Vehicle Stock Log updated successfully.'));
+                    }
+                }
+            });
+        }
     }
-});
+},
+);

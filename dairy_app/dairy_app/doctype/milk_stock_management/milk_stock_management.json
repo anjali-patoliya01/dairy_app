@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-20 22:27:45.385520",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dyjn",
+  "total_milk_bought",
+  "total_milk_sold",
+  "pending_stock",
+  "column_break_kdtp",
+  "vehicle",
+  "quantity_transferred",
+  "stock_after_transfer"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dyjn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_milk_bought",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Milk Bought",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_milk_sold",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total milk sold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pending_stock",
+   "fieldtype": "Float",
+   "label": "Pending Stock",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kdtp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Select the vehicle for the transfer",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "quantity_transferred",
+   "fieldtype": "Float",
+   "label": "Quantity Transferred"
+  },
+  {
+   "fieldname": "stock_after_transfer",
+   "fieldtype": "Float",
+   "label": "Stock After Transfer",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-20 22:31:57.170521",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Milk Stock Management",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -9,7 +9,7 @@ frappe.ui.form.on('Purchase Order Item', {
         calculate_rate_and_amount(frm, cdt, cdn);
     }
 });
-
+    
 function calculate_rate_and_amount(frm, cdt, cdn) {
     let row = frappe.get_doc(cdt, cdn);
     if (row.fat_content) {

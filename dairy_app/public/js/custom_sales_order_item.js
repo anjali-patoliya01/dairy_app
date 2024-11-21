@@ -24,6 +24,3 @@ function calculate_rate_and_amount(row, cdt, cdn) {
         frappe.model.set_value(cdt, cdn, 'amount', row.amount);
     }
 }
-
-
-

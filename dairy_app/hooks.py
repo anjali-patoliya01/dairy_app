@@ -47,9 +47,9 @@ app_license = "mit"
 doctype_js = {
     "Sales Order": "public/js/custom_sales_order_item.js",
     "Purchase Order": "public/js/custom_purchase_order_item.js",
-    "Stock Entry": "public/js/stock_management.js"
+    "Stock Entry": "public/js/stock_management.js",
 }
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -143,13 +143,15 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Purchase Receipt": {
+        "before_save": "dairy_app.override.qc_purchase_validation.validate_quality_inspection"
+    },
+    "Delivery Note": {
+        "before_save": "dairy_app.override.qc_sales_validation.validate_quality_inspection"
+    }
+}
+
 
 # Scheduled Tasks
 # ---------------
