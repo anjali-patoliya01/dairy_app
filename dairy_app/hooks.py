@@ -48,6 +48,7 @@ doctype_js = {
     "Sales Order": "public/js/custom_sales_order_item.js",
     "Purchase Order": "public/js/custom_purchase_order_item.js",
     "Stock Entry": "public/js/stock_management.js",
+    "Customer":'public/js/auto_assign_sales_manager.js'
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -123,21 +124,23 @@ doctype_js = {
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
+permission_query_conditions = {
+	"Customer": "dairy_app.override.user_permission.get_permission_query_conditions",
+}
+
+has_permission = {
+	"Customer": "dairy_app.override.user_permission.has_permission",
+}
 
 # DocType Class
 # ---------------
 # Override standard doctype classes
 
 # override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"Quality Inspection": "dairy_app.override.qc_inspection.QualityInspectionOverride"
+
 # }
+
 
 # Document Events
 # ---------------
@@ -149,7 +152,21 @@ doc_events = {
     },
     "Delivery Note": {
         "before_save": "dairy_app.override.qc_sales_validation.validate_quality_inspection"
-    }
+    },
+    "Quality Inspection": {
+        "validate": "dairy_app.override.qc_reading_value_validation.validate_reading_values"
+    },
+    "Quality Inspection": {
+        "on_update": "dairy_app.override.system_notification.notify_on_quality_inspection"
+    },
+    # "Quality Inspection": {
+    #     "on_update": "dairy_app.override.qc_inspection.validate",
+    #     "on_submit": "dairy_app.override.qc_inspection.validate"
+    # }
+    # "Customer": {
+        # "on_update": "dairy_app.override.user_permission.sales_manager_user_permission",
+    # }
+
 }
 
 

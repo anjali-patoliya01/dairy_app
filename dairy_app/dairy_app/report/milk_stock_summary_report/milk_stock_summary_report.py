@@ -12,10 +12,21 @@ def execute(filters=None):
         {"label": "Pending Stock (Liters)", "fieldname": "pending_stock", "fieldtype": "Float", "width": 200},
     ]
 
+    stock_filters = {}
+
+    if filters.get("item_code"):
+        stock_filters["item_code"] = filters.get("item_code")
+    
+    if filters.get("warehouse"):
+        stock_filters["warehouse"] = filters.get("warehouse")
+    
+    if filters.get("from_date") and filters.get("to_date"):
+        stock_filters["posting_date"] = ["between", (filters.get("from_date"), filters.get("to_date"))]
+
     stock_entries = frappe.get_all(
         "Stock Ledger Entry",  
         fields=["item_code", "actual_qty"],
-        filters=filters,
+        filters=stock_filters,
         order_by="posting_date asc"
     )
 

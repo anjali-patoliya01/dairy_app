@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-21 19:53:54.701559",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "par_fat_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "par_fat_rate",
+   "fieldtype": "Currency",
+   "label": "Par Fat Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-21 23:22:13.280155",
+ "modified_by": "Administrator",
+ "module": "Dairy App",
+ "name": "Purchase Milk Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Purchase Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

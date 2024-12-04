@@ -19,11 +19,17 @@ def execute(filters=None):
         {"label": "Revenue", "fieldname": "amount", "fieldtype": "Currency", "width": 150},
     ]
 
+    sales_filters = {}
+    if filters.get("customer"):
+        sales_filters["customer"] = filters.get("customer")
+    
+    if filters.get("from_date") and filters.get("to_date"):
+        sales_filters["posting_date"] = ["between", (filters.get("from_date"), filters.get("to_date"))]
 
     sales_invoices = frappe.get_all(
         "Sales Invoice",  
-        fields=["customer", "posting_date"],
-        filters=filters,
+        fields=["name", "customer", "posting_date"],
+        filters=sales_filters,
         order_by="posting_date asc"
     )
 
@@ -61,5 +67,4 @@ def execute(filters=None):
         })
 
     return columns, data
-
 
